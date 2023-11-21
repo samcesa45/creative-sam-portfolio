@@ -5,20 +5,15 @@ import { styles } from "@/styles";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useContext, useEffect, useState } from "react";
-import { ThemeContext, ThemeProvider } from "@/context";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { toggleTheme } = useContext(ThemeContext);
   const { theme, setTheme } = useTheme();
 
-  // const handleThemeToggle = () => {
-  //   setTheme(e.target.value);
-  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,6 +65,7 @@ export default function Navbar() {
         >
           <Link
             href="/"
+            passHref
             className="flex items-center gap-2"
             onClick={() => window.scrollTo(0, 0)}
           >

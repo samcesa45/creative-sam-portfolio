@@ -1,3 +1,4 @@
+
 import {
   mobile,
   backend,
@@ -24,8 +25,14 @@ import {
   tripguide,
   threejs,
   herobg,
+  
+
 } from "@/assets";
 import hasob from "../assets/hasob.png";
+import   taisolarin from "../assets/taisolarin.png";
+import   corenotes from "../assets/corenotes.png";
+import   iterum from "../assets/iterum.png";
+import   dlplus from "../assets/dlplus.png";
 
 export const navLinks = [
   {
@@ -44,7 +51,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "React Developer",
     icon: web,
   },
   {
@@ -52,11 +59,11 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Node js Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Laravel Developer",
     icon: creator,
   },
 ];
@@ -204,6 +211,100 @@ const testimonials = [
 
 const projects = [
   {
+    name: "E-Learning Portal",
+    description:
+      "An Elearning platform that enables learning interaction between admin,department-admin, students and lecturers.including live classroom with Bigbluebutton",
+    tags: [
+      {
+        name: "laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap5",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "jquery",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: taisolarin,
+    source_code_link: "https://tasued-elearning.com.ng/",
+  },
+  {
+    name: "Scola LMS Portal",
+    description:
+      "An Elearning platform that enables learning interaction between admin,department-admin, students and lecturers.",
+    tags: [
+      {
+        name: "laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap5",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "jquery",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: iterum,
+    source_code_link: "https://tasued-elearning.com.ng/",
+  },
+  
+  {
+    name: "Core Notes",
+    description:
+      "An Hospital Management platform that manages the daily activities of staff and track their progress on task accomplished.",
+    tags: [
+      {
+        name: "Express",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: corenotes,
+    source_code_link: "https://corenotes.netlify.app/",
+  },
+  {
+    name: "Dlplus",
+    description:
+      " is a prominent trading and B2B IT service provider, which provides custom IT services and solutions for businesses of various needs.",
+    tags: [
+      {
+        name: "wordpress",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Elementor",
+        color: "green-text-gradient",
+      },
+     
+    ],
+    image: dlplus,
+    source_code_link: "https://www.dlplus.com.ng/",
+  },
+  {
     name: "Car Rent",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
@@ -265,7 +366,8 @@ const projects = [
     ],
     image: tripguide,
     source_code_link: "https://github.com/",
-  },
+  }
+ 
 ];
 
 export { services, technologies, experiences, testimonials, projects };
