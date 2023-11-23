@@ -1,7 +1,5 @@
 "use client";
 import { experiences } from "@/constants";
-import { textVariant } from "@/utils/motion";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import "react-vertical-timeline-component/style.min.css";
 
@@ -10,7 +8,6 @@ import {
   VerticalTimeline,
 } from "react-vertical-timeline-component";
 import SectionWrapper from "../section_wrapper/SectionWrapper";
-import { styles } from "@/styles";
 import { useContext } from "react";
 import { ThemeContext } from "@/context";
 import { useTheme } from "next-themes";

@@ -53,8 +53,8 @@ export default function Navbar() {
       <nav
         className={`${
           styles.paddingX
-        } w-full flex items-center py-5 fixed top-0 z-20 ${
-          scrolled ? "bg-primary" : "bg-transparent"
+        } w-full flex dark:text-white text-primary items-center py-5 fixed top-0 z-20 ${
+          scrolled || theme == 'dark' ? "bg-primary text-white" : "bg-transparent"
         }`}
       >
         <motion.div
@@ -72,11 +72,11 @@ export default function Navbar() {
             <Image src={logo} alt="" className="w-9 h-9 object-contain" />
             <p
               className={`${
-                scrolled || theme === "dark" ? "text-white" : "text-[#222222]"
-              }  text-[18px] font-bold cursor-pointer flex`}
+                scrolled || theme === "dark" ? "text-white" : ""
+              }  text-[#222222] dark:text-white text-[18px] font-bold cursor-pointer flex`}
             >
               Sam &nbsp;
-              <span className="sm:block hidden"> | Full Stack Developer</span>
+              <span className="sm:block hidden"> | web & Mobile Artisan</span>
             </p>
           </Link>
 
@@ -97,11 +97,7 @@ export default function Navbar() {
               id="theme-toggle"
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               type="button"
-              className={`${
-                theme === "dark"
-                  ? "text-gray-300 border-gray-300"
-                  : "text-gray-800 border-gray-500"
-              } border-2  rounded-lg text-sm p-2  sm:flex`}
+              className={`border-2  text-gray-800 border-gray-500 dark:text-gray-300 dark:border-gray-300 rounded-lg text-sm p-2  sm:flex`}
             >
               <svg
                 id="theme-toggle-dark-icon"
@@ -114,7 +110,7 @@ export default function Navbar() {
               </svg>
               <svg
                 id="theme-toggle-light-icon"
-                className={`${theme === "dark" ? "" : "hidden"} w-5 h-5`}
+                className={`${theme === "dark" ? "" : "hidden"}  dark:text-white w-5 h-5`}
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"

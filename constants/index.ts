@@ -33,6 +33,7 @@ import   taisolarin from "../assets/taisolarin.png";
 import   corenotes from "../assets/corenotes.png";
 import   iterum from "../assets/iterum.png";
 import   dlplus from "../assets/dlplus.png";
+import shops from "../assets/shops.jpg"
 
 export const navLinks = [
   {
@@ -129,7 +130,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
+    title: "React Developer",
     company_name: "Hasob",
     icon: hasob,
     iconBg: "#383E56",
@@ -155,7 +156,7 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer",
+    title: "Laravel Developer",
     company_name: "Hasob",
     icon: hasob,
     iconBg: "#383E56",
@@ -284,7 +285,7 @@ const projects = [
       },
     ],
     image: corenotes,
-    source_code_link: "https://corenotes.netlify.app/",
+    source_code_link: "https://corenotes.net",
   },
   {
     name: "Dlplus",
@@ -303,6 +304,24 @@ const projects = [
     ],
     image: dlplus,
     source_code_link: "https://www.dlplus.com.ng/",
+  },
+  {
+    name: "Shops",
+    description:
+      "Shops is THE professional, full-featured and high performance e-commerce mobile application!.It connects buyer to shop for their favorite product",
+    tags: [
+      {
+        name: "react native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "laravel",
+        color: "green-text-gradient",
+      }
+     
+    ],
+    image: shops,
+    source_code_link: "https://github.com/samcesa45/shops/",
   },
   {
     name: "Car Rent",
