@@ -94,9 +94,10 @@ export default function Navbar() {
               </li>
             ))}
             <button
-              id="theme-toggle"
+              id="toggle-button"
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               type="button"
+              aria-label="toggle-button"
               className={`border-2  text-gray-800 border-gray-500 dark:text-gray-300 dark:border-gray-300 rounded-lg text-sm p-2  sm:flex`}
             >
               <svg
