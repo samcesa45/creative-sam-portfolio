@@ -1,4 +1,4 @@
-'use client'
+
 import Navbar from "@/components/navbar";
 import About from "./about/page";
 import Hero from "@/components/hero";

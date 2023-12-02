@@ -1,16 +1,9 @@
-import React, { Suspense } from "react";
+import React, {lazy, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import Loader from "@/components/Loader";
 
-const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
-
-  return (
-    // eslint-disable-next-line react/no-unknown-property
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
-  );
-};
+const Earth = lazy(() => import('./EarthModel'))
 
 const EarthCanvas = () => {
   return (
