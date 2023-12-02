@@ -133,6 +133,7 @@ const Contacts = () => {
             <span className="text-white font-medium mb-4">Name</span>
             <input
               type="text"
+              key="name"
               name='name'
               value={form.name}
               onChange={handleChange}
@@ -147,6 +148,7 @@ const Contacts = () => {
             <span className="text-white font-medium mb-4">Email</span>
             <input
               type="text"
+              key="email"
               name='email'
               value={form.email}
               onChange={handleChange}
@@ -162,6 +164,7 @@ const Contacts = () => {
             <textarea
               rows={3}
               name='message'
+              key="message"
               value={form.message}
               onChange={handleChange}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
