@@ -66,10 +66,11 @@ export default function Navbar() {
           <Link
             href="/"
             passHref
+            aria-label="home page"
             className="flex items-center gap-2"
             onClick={() => window.scrollTo(0, 0)}
           >
-            <Image src={logo} alt="" className="w-9 h-9 object-contain" />
+            <Image src={logo} alt="logo-image" className="w-9 h-9 object-contain" />
             <p
               className={`${
                 scrolled || theme === "dark" ? "text-white" : ""
@@ -80,10 +81,11 @@ export default function Navbar() {
             </p>
           </Link>
 
-          <motion.ul className="list-none flex flex-row gap-10">
+          <motion.ul className="list-none flex flex-row gap-10" role="list">
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
+                role="listitem"
                 className={`${active === nav.id ? "text-white" : ""} ${
                   scrolled || theme === "dark"
                     ? "hover:text-white  text-secondary"
@@ -101,7 +103,7 @@ export default function Navbar() {
               className={`border-2  text-gray-800 border-gray-500 dark:text-gray-300 dark:border-gray-300 rounded-lg text-sm p-2  sm:flex`}
             >
               <svg
-                id="theme-toggle-dark-icon"
+                id="toggle-button-dark-icon"
                 className={`${theme === "dark" ? "hidden" : ""} w-5 h-5 `}
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -110,7 +112,7 @@ export default function Navbar() {
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
               </svg>
               <svg
-                id="theme-toggle-light-icon"
+                id="toggle-button-light-icon"
                 className={`${theme === "dark" ? "" : "hidden"}  dark:text-white w-5 h-5`}
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -138,15 +140,16 @@ export default function Navbar() {
                 !toggle ? "hidden" : "flex"
               } p-6 black-gradient dark:bg-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
             >
-              <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+              <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4" role="list">
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
+                    role='listitem'
                     className={`font-poppins font-medium cursor-pointer  text-[16px] 
                   ${active === nav.id ? "text-white" : "text-secondary"}`}
                     onClick={() => setToggle(!toggle)}
                   >
-                    <Link href={`#${nav.id}`}>{nav.title}</Link>
+                    <Link href={`#${nav.id}`} aria-label={nav.title}>{nav.title}</Link>
                   </li>
                 ))}
               </ul>
