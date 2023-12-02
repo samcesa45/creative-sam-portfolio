@@ -66,7 +66,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
             <div className="gallery-link">
@@ -76,7 +75,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
             <div className="gallery-link">
@@ -86,7 +84,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
           </div>
@@ -112,7 +109,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
             <div className="gallery-link">
@@ -122,7 +118,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
             <div className="gallery-link">
@@ -132,7 +127,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
           </div>
@@ -158,7 +152,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
             <div className="gallery-link">
@@ -168,7 +161,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
             <div className="gallery-link">
@@ -178,7 +170,6 @@ const MyTabs = () => {
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
-                loading='eager'
               />
             </div>
           </div>
