@@ -41,7 +41,8 @@ export default function Navbar() {
       });
     };
 
-    window.addEventListener("scroll", navbarHighlighter);
+    window.addEventListener("scroll", navbarHighlighter, {passive:true});
+    window.addEventListener('touchstart', handleScroll, {passive: true});
 
     return () => {
       window.removeEventListener("scroll", handleScroll);

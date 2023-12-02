@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2";
 import { Spinner } from "@/app/Loader";
-import useFocus from "../custom-hooks/useFocus";
+
 
 type FormErrors = {
   [key: string]: string;
@@ -24,7 +24,7 @@ const Contacts = () => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
   const [isValid, setIsValid] = useState(false);
-  const [focusRef, setFocus] = useFocus<HTMLInputElement>();
+ 
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -62,7 +62,7 @@ const Contacts = () => {
     }
 
     //update form data state and errors state
-    setForm({ ...form, [name]: value });
+    setForm({...form, [name]: value });
 
     setErrors(newErrors);
   };
@@ -71,7 +71,7 @@ const Contacts = () => {
     e.preventDefault();
 
     if (Object.keys(errors).length === 0) {
-      setIsValid(true);
+      
       setLoading(true);
       emailjs
         .send(
@@ -104,9 +104,7 @@ const Contacts = () => {
     }
   };
 
-  useEffect(() => {
-    setFocus();
-  }, [setFocus]);
+  
 
   return (
     <div
@@ -135,9 +133,8 @@ const Contacts = () => {
             <span className="text-white font-medium mb-4">Name</span>
             <input
               type="text"
-              name="name"
+              name='name'
               value={form.name}
-              ref={focusRef}
               onChange={handleChange}
               placeholder="Your Name"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
@@ -149,9 +146,8 @@ const Contacts = () => {
           <label htmlFor="email" className="flex flex-col">
             <span className="text-white font-medium mb-4">Email</span>
             <input
-              type="email"
-              name="email"
-              id="email"
+              type="text"
+              name='email'
               value={form.email}
               onChange={handleChange}
               placeholder="Enter Your Email"
@@ -164,9 +160,8 @@ const Contacts = () => {
           <label htmlFor="message" className="flex flex-col">
             <span className="text-white font-medium mb-4">Enter Message</span>
             <textarea
-              name="message"
-              id="message"
               rows={3}
+              name='message'
               value={form.message}
               onChange={handleChange}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
@@ -177,9 +172,13 @@ const Contacts = () => {
           </label>
 
           <button
-            className="text-white disabled:text-gray-400  disabled:cursor-not-allowed"
-            type="submit"
-            disabled={!isValid && Object.keys(errors).length !== 0}
+             className={`text-white ${
+              (loading || !isValid || Object.keys(errors).length !== 0) &&
+              "disabled:text-gray-400 disabled:cursor-not-allowed"
+            }`}
+            type='submit'
+            aria-label="submit"
+            disabled={loading || !isValid && Object.keys(errors).length !== 0}
           >
             {loading ? <Spinner /> : "Send"}
           </button>

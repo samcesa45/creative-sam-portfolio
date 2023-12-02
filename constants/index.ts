@@ -34,6 +34,8 @@ import   corenotes from "../assets/corenotes.png";
 import   iterum from "../assets/iterum.png";
 import   dlplus from "../assets/dlplus.png";
 import shops from "../assets/shops.jpg"
+import tetfund from "../assets/tetfund.png"
+import sanmtos from "../assets/sanmtos.png"
 
 export const navLinks = [
   {
@@ -315,6 +317,10 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
+        name: "redux",
+        color: "blue-text-gradient",
+      },
+      {
         name: "laravel",
         color: "green-text-gradient",
       }
@@ -324,68 +330,44 @@ const projects = [
     source_code_link: "https://github.com/samcesa45/shops/",
   },
   {
-    name: "Car Rent",
+    name: "Tetfund Website",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
-        name: "react",
+        name: "wordpress",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Elementor",
         color: "green-text-gradient",
       },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: tetfund,
+    source_code_link: "https://tetfund.gov.ng/",
   },
   {
-    name: "Job IT",
+    name: "Sanmtos Farm",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A multi vendor ecommerce marketplace that helps small and large businesses grow and reach new consumers. It offers a platform where customers in any part of the world can find and shop for all they need.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
+        name: "rtk query",
         color: "pink-text-gradient",
       },
+      {
+        name: "laravel",
+        color: "green-text-gradient",
+      },
     ],
-    image: jobit,
+    image: sanmtos,
     source_code_link: "https://github.com/",
   },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  }
+  
  
 ];
 

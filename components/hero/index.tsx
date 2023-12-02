@@ -18,7 +18,7 @@ export default function Hero() {
         >
           <div className={`w-5 h-5 rounded-full bg-[#ff9301] dark:bg-[#915EFF] ${theme === "dark" ? 'dark:bg-[#915EFF]' : 'bg-[#ff9301]'}`}></div>
           <div
-            className={`w-1 sm:h-80 h-40 ${
+            className={`w-1 sm:h-80 h-40 dark:violet-gradient yellow-gradient  ${
               theme === "dark" ? "violet-gradient" : "yellow-gradient"
             }`}
           ></div>
