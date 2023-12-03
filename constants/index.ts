@@ -332,7 +332,7 @@ const projects = [
   {
     name: "Tetfund Website",
     description:
-      "Tetfund landing Page for enhanced user experience",
+      "Tetfund landing Page for enhanced user experience and enables users to learn about recent developments ongoing in governments institutions",
     tags: [
       {
         name: "wordpress",
