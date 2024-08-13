@@ -36,6 +36,8 @@ import   dlplus from "../assets/dlplus.png";
 import shops from "../assets/shops.jpg"
 import tetfund from "../assets/tetfund.png"
 import sanmtos from "../assets/sanmtos.png"
+import itranxit from "../assets/iTranxit.png"
+import itranxit2 from "../assets/iTransxit2.png"
 
 export const navLinks = [
   {
@@ -214,34 +216,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "E-Learning Portal",
-    description:
-      "An Elearning platform that enables learning interaction between admin,department-admin, students and lecturers.including live classroom with Bigbluebutton",
-    tags: [
-      {
-        name: "laravel",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "green-text-gradient",
-      },
-      {
-        name: "bootstrap5",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "jquery",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: taisolarin,
-    source_code_link: "https://tasued-elearning.com.ng/",
-  },
-  {
     name: "Scola LMS Portal",
     description:
-      "An Elearning platform that enables learning interaction between admin,department-admin, students and lecturers.",
+      "Scola is an innovative, multi-tenant and comprehensive Learning Management System (LMS) designed to streamline administrative and operational tasks within a school environment.",
     tags: [
       {
         name: "laravel",
@@ -261,9 +238,43 @@ const projects = [
       },
     ],
     image: iterum,
-    source_code_link: "https://tasued-elearning.com.ng/",
+    source_code_link: "https://platform.scola.ng/",
   },
-  
+  {
+    name: "iTranxit Logistics",
+    description:
+      "iTranxit enables individuals and businesses to order or schedule a pickup and track frieght deliveries seamlessly.",
+    tags: [
+      {
+        name: "React",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "bootstrap5",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: itranxit,
+    source_code_link: "https://itranxit.com/",
+  },
+  {
+    name: "iTranxit Mobile",
+    description:
+      "iTranxit enables individuals and businesses to order or schedule a pickup and track frieght deliveries seamlessly.",
+    tags: [
+      {
+        name: "Flutter",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "google-map",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: itranxit2,
+    source_code_link: "https://itranxit.com/",
+  },
+
   {
     name: "Core Notes",
     description:
@@ -302,7 +313,6 @@ const projects = [
         name: "Elementor",
         color: "green-text-gradient",
       },
-     
     ],
     image: dlplus,
     source_code_link: "https://www.dlplus.com.ng/",
@@ -323,8 +333,7 @@ const projects = [
       {
         name: "laravel",
         color: "green-text-gradient",
-      }
-     
+      },
     ],
     image: shops,
     source_code_link: "https://github.com/samcesa45/shops/",
@@ -367,8 +376,6 @@ const projects = [
     image: sanmtos,
     source_code_link: "https://github.com/",
   },
-  
- 
 ];
 
 export { services, technologies, experiences, testimonials, projects };
