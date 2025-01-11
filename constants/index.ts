@@ -162,7 +162,7 @@ const experiences = [
       "Developed and maintained 3+ client-facing web applications, enhancing user engagement and satisfaction by 25%.",
       "Collaborated with designers and product managers to deliver intuitive and visually appealing interfaces.",
       "Optimized web performance and ensured accessibility compliance, leading to a 20% improvement in user experience metrics.",
-      "Developed and maintained 2 websites templates so that customers and select the one that meets their requirements thereby increasing clients satisfactions",
+      "Developed and maintained 2 websites templates so that clients can select the one that meets their requirements thereby increasing clients satisfactions",
       "Led a team of 3 developers to integrate complex UI components, increasing project delivery speed by 20%",
     ],
   },
