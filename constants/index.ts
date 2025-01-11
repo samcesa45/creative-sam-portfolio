@@ -36,7 +36,7 @@ import   myeverydeal from "../assets/my-everydeal.png";
 import   zelfarms from "../assets/zelfarms-img.png";
 import   DNest from "../assets/DNest-img.png";
 import   dlplus from "../assets/dlplus.png";
-import   Zeltech from "../assets/Zeltech.jpg"
+import   Zeltech from "../assets/zeltech.jpg"
 import   MyeverydealLogo from "../assets/myeverydeal-website-logo.webp"
 import shops from "../assets/shops.jpg"
 import tetfund from "../assets/tetfund.png"
