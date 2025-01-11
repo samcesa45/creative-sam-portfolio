@@ -30,7 +30,7 @@ const ExperienceCard = ({ ...experience }) => {
         background: `${theme === "dark" ? experience.iconBg : "#222222"}`,
       }}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex items-center justify-center w-full h-full">
           <Image
             src={experience.icon}
             alt={experience.company_name}
@@ -49,7 +49,7 @@ const ExperienceCard = ({ ...experience }) => {
         </p>
       </div>
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
+      <ul className="mt-5 ml-5 space-y-2 list-disc">
         {experience.points.map((point: string, index: number) => (
           <li
             key={`experience-point-${index}`}
@@ -79,7 +79,7 @@ const Experience = () => {
         data-aos="fade-up"
         data-aos-duration="1200"
         data-aos-delay=""
-        className="mt-20 flex flex-col"
+        className="flex flex-col mt-20"
       >
         <VerticalTimeline
           lineColor={`${theme === "dark" ? "#ffffff" : "#1D1836"}`}

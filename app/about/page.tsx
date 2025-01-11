@@ -24,7 +24,7 @@ const ServiceCard = ({ ...service }) => (
         <Image
           src={service.icon}
           alt="web-development"
-          className="w-16 h-16 object-contain"
+          className="object-contain w-16 h-16"
         />
         <h3 className="text-white text-[20px] font-bold text-center">
           {service.title}
@@ -52,12 +52,12 @@ const About = () => {
         className="mt-4 text-[#222222] dark:text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         {`I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js,React native, wordpress and Laravel. I'm a quick learner and collaborate closely with clients to
+        JavaScript, and expertise in frameworks like React, Next js, React native, Node.js, and
+        , wordpress and Laravel. I'm a quick learner and collaborate closely with clients to
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!`}
       </p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="flex flex-wrap gap-10 mt-20">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

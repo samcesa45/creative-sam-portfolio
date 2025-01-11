@@ -32,7 +32,12 @@ import hasob from "../assets/hasob.png";
 import   taisolarin from "../assets/taisolarin.png";
 import   corenotes from "../assets/corenotes.png";
 import   iterum from "../assets/iterum.png";
+import   myeverydeal from "../assets/my-everydeal.png";
+import   zelfarms from "../assets/zelfarms-img.png";
+import   DNest from "../assets/DNest-img.png";
 import   dlplus from "../assets/dlplus.png";
+import   Zeltech from "../assets/Zeltech.jpg"
+import   MyeverydealLogo from "../assets/myeverydeal-website-logo.webp"
 import shops from "../assets/shops.jpg"
 import tetfund from "../assets/tetfund.png"
 import sanmtos from "../assets/sanmtos.png"
@@ -134,58 +139,48 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React Developer",
-    company_name: "Hasob",
+    title: "Frontend Engineer",
+    company_name: "Zeltech",
+    icon: Zeltech,
+    iconBg: "#E6DEDD",
+    date: "Oct 2024 - Jan 2024",
+    points: [
+      "Built Zelfarms and DNest web application using React, Zustand and Tanstack query, reducing page load time by 30% and enhancing user retention.",
+      "Developed and maintained 2+ client-facing web applications, enhancing user engagement and satisfaction by 20%.",
+      "Enhanced cross-browser compatibility and SEO, leading to a 15% boost in organic search traffic.",
+      "Implemented responsive designs for multiple platforms, resulting in a 40% increase in mobile traffic.",
+      "Conducted code reviews and mentoring, improving code quality and reducing production bugs by 15%.",
+    ],
+  },
+  {
+    title: "Frontend Engineer",
+    company_name: "Hasob Integrated Service",
     icon: hasob,
     iconBg: "#383E56",
-    date: "Dec 2021-April 2022",
+    date: "Dec 2021 - Dec 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained 3+ client-facing web applications, enhancing user engagement and satisfaction by 25%.",
+      "Collaborated with designers and product managers to deliver intuitive and visually appealing interfaces.",
+      "Optimized web performance and ensured accessibility compliance, leading to a 20% improvement in user experience metrics.",
+      "Developed and maintained 2 websites templates so that customers and select the one that meets their requirements thereby increasing clients satisfactions",
+      "Led a team of 3 developers to integrate complex UI components, increasing project delivery speed by 20%",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Hasob",
-    icon: hasob,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021-Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Laravel Developer",
-    company_name: "Hasob",
-    icon: hasob,
+    title: "Frontend Engineer",
+    company_name: "Myeverydeal",
+    icon: MyeverydealLogo,
     iconBg: "#383E56",
-    date: "Jan 2022-Jan 2023",
+    date: "Jan 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Hasob",
-    icon: hasob,
-    iconBg: "#E6DEDD",
-    date: "Feb 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using Laravel and Jquery.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built a dynamic e-commerce platform using React and Rtk query, resulting in a 35% increase in user transactions.",
+      "Integrated third-party APIs for real-time product updates and payments (Paystack), improving operational efficiency.",
+      "Enhanced cross-browser compatibility and SEO, leading to a 15% boost in organic search traffic.",
+      "Collaborated with stakeholders to gather requirements and deliver tailored solutions, achieving a 95% client satisfaction rate.",
     ],
   },
 ];
+
 
 const testimonials = [
   {
@@ -239,6 +234,81 @@ const projects = [
     ],
     image: iterum,
     source_code_link: "https://platform.scola.ng/",
+  },
+  {
+    name: "Zelfarms",
+    description:
+      "Zelfarms is an ecommerce platform that focus on delivering products that meet the highest standards of quality and taste.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tanstack query",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwindcss",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "zustand",
+          color: "orange-text-gradient",
+        },
+      ],
+    image: zelfarms,
+    source_code_link: "https://zelfarms.com",
+  },
+  {
+    name: "DNest Rentals",
+    description:
+      "DNest helps Facilitate property rentals, bookings, and hospitality management.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tanstack query",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: DNest,
+    source_code_link: "https://dnest.ng",
+  },
+  {
+    name: "MyEverydeal",
+    description:
+      "A multi vendor ecommerce marketplace that helps small and large businesses grow and reach new consumers. It offers a platform where customers in any part of the world can find and shop for all they need.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "redux/rtkquery",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "bootstrap5",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: myeverydeal,
+    source_code_link: "https://marketplace.myeverydeal.com",
   },
   {
     name: "iTranxit Logistics",
