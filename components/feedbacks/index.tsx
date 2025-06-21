@@ -1,9 +1,9 @@
-"use client";
-import { testimonials } from "@/constants";
-import { styles } from "@/styles";
-import { fadeIn, textVariant } from "@/utils/motion";
-import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+'use client';
+import { testimonials } from '@/constants';
+import { styles } from '@/styles';
+import { fadeIn, textVariant } from '@/utils/motion';
+import { motion } from 'framer-motion';
+import Image, { StaticImageData } from 'next/image';
 
 const Feedbacks = () => {
   return (

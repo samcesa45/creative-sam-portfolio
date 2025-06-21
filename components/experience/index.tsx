@@ -1,33 +1,33 @@
-"use client";
-import { experiences } from "@/constants";
-import Image from "next/image";
-import "react-vertical-timeline-component/style.min.css";
+'use client';
+import { experiences } from '@/constants';
+import Image from 'next/image';
+import 'react-vertical-timeline-component/style.min.css';
 
 import {
   VerticalTimelineElement,
   VerticalTimeline,
-} from "react-vertical-timeline-component";
-import SectionWrapper from "../section_wrapper/SectionWrapper";
-import { useContext } from "react";
-import { ThemeContext } from "@/context";
-import { useTheme } from "next-themes";
+} from 'react-vertical-timeline-component';
+import SectionWrapper from '../section_wrapper/SectionWrapper';
+import { useContext } from 'react';
+import { ThemeContext } from '@/context';
+import { useTheme } from 'next-themes';
 
 const ExperienceCard = ({ ...experience }) => {
   const { theme } = useTheme();
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: `${theme === "dark" ? "#fff" : "#222222"}`,
+        background: '#1d1836',
+        color: `${theme === 'dark' ? '#fff' : '#222222'}`,
       }}
       contentArrowStyle={{
         borderRight: `${
-          theme === "dark" ? "7px solid #232631" : "7px solid #222222"
+          theme === 'dark' ? '7px solid #232631' : '7px solid #222222'
         }`,
       }}
       date={experience.date}
       iconStyle={{
-        background: `${theme === "dark" ? experience.iconBg : "#222222"}`,
+        background: `${theme === 'dark' ? experience.iconBg : '#222222'}`,
       }}
       icon={
         <div className="flex items-center justify-center w-full h-full">
@@ -82,7 +82,7 @@ const Experience = () => {
         className="flex flex-col mt-20"
       >
         <VerticalTimeline
-          lineColor={`${theme === "dark" ? "#ffffff" : "#1D1836"}`}
+          lineColor={`${theme === 'dark' ? '#ffffff' : '#1D1836'}`}
         >
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />
@@ -93,4 +93,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, 'work');

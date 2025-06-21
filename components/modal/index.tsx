@@ -1,6 +1,6 @@
-"use client";
-import { useRouter } from "next/navigation";
-import React, { useCallback, useEffect, useRef } from "react";
+'use client';
+import { useRouter } from 'next/navigation';
+import React, { useCallback, useEffect, useRef } from 'react';
 
 type Props = {
   children?: React.ReactNode;
@@ -23,22 +23,22 @@ const Modal = ({ children }: Props) => {
         }
       }
     },
-    [onDisMiss]
+    [onDisMiss],
   );
 
   const onKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
-      if (e.key === "Escape") onDisMiss();
+      if (e.key === 'Escape') onDisMiss();
     },
-    [onDisMiss]
+    [onDisMiss],
   );
 
   useEffect(() => {
-    document.addEventListener("keydown", onKeyDown as unknown as EventListener);
+    document.addEventListener('keydown', onKeyDown as unknown as EventListener);
     return () =>
       document.removeEventListener(
-        "keydown",
-        onKeyDown as unknown as EventListener
+        'keydown',
+        onKeyDown as unknown as EventListener,
       );
   }, [onKeyDown]);
   return (

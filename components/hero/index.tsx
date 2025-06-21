@@ -1,8 +1,8 @@
-"use client";;
-import Link from "next/link";
-import { motion } from "framer-motion";
-import "aos/dist/aos.css";
-import { useTheme } from "next-themes";
+'use client';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import 'aos/dist/aos.css';
+import { useTheme } from 'next-themes';
 export default function Hero() {
   const { theme } = useTheme();
   return (
@@ -24,8 +24,7 @@ export default function Hero() {
 
         <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="">
           <h1 className="font-black text-[#222222] dark:text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 ">
-            Hi, {"I'm"}{" "}
-            <span className="text-[#915EFF]">Sam</span>
+            Hi, {"I'm"} <span className="text-[#915EFF]">Sam</span>
           </h1>
           <p className="text-[#222222] max-w-[400px] dark:text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
             I design and develop services for customers of all sizes,
@@ -46,7 +45,7 @@ export default function Hero() {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: "loop",
+                repeatType: 'loop',
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />

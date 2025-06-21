@@ -1,6 +1,19 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
+'use client';
+import React, { useState } from 'react';
+import Gallery from './gallery';
+import { tabData } from '@/constants';
+import { StaticImageData } from 'next/image';
+type GalleryImage = {
+  src: string | StaticImageData;
+  alt: string;
+};
+
+export type TabItem = {
+  id: number;
+  title: string;
+  images: GalleryImage[];
+  boxClass?: string;
+};
 
 const MyTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -8,173 +21,48 @@ const MyTabs = () => {
   const handleTabClick = (index: number) => {
     setActiveTab(index);
   };
+
+  const isAllTab = activeTab === 0;
+
+  //Get all images from tabs except 'All
+  const mergedImages = tabData
+    .filter((tab) => tab.id !== 0)
+    .flatMap((tab) => tab.images);
+  const currentTabData = tabData.find((tab) => tab.id === activeTab);
   return (
     <div>
+      {/* Tab Buttons */}
       <div className="flex mt-8 mb-20">
-        <button
-          className={`mx-4 py-2 text-[#222222] dark:text-white ${
-            activeTab === 0
-              ? "border-b-2 w-max border-b-[#915EFF]  "
-              : "border-b-2 border-transparent"
-          }`}
-          style={{ transition: "all 0.55s ease" }}
-          onClick={() => handleTabClick(0)}
-        >
-          All
-        </button>
-        <button
-          className={`mx-4 py-2 text-[#222222] dark:text-white ${
-            activeTab === 1
-              ? "border-b-2 w-max border-b-[#915EFF]  "
-              : "border-b-2 border-transparent"
-          }`}
-          style={{ transition: "all 0.55s ease" }}
-          onClick={() => handleTabClick(1)}
-        >
-          Brand
-        </button>
-        <button
-          className={`mx-4 py-2 text-[#222222] dark:text-white ${
-            activeTab === 2
-              ? "border-b-2 w-max border-b-[#915EFF]  "
-              : "border-b-2 border-transparent"
-          }`}
-          style={{ transition: "all 0.55s ease" }}
-          onClick={() => handleTabClick(2)}
-        >
-          Classic
-        </button>
+        {tabData.map((tab) => (
+          <button
+            key={tab.id}
+            className={`mx-4 py-2 text-[#222222] dark:text-white ${
+              activeTab === tab.id
+                ? 'border-b-2 w-max border-b-[#915EFF]  '
+                : 'border-b-2 border-transparent'
+            }`}
+            style={{ transition: 'all 0.55s ease' }}
+            onClick={() => handleTabClick(tab.id)}
+          >
+            {tab.title}
+          </button>
+        ))}
       </div>
-
-      {activeTab === 0 && (
+      {/* Tab Buttons */}
+      {/* Tab Content */}
+      {currentTabData && (
         <div
-          className="portfolio-box-01 aos-init"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-          data-aos-delay=""
+          className={`${currentTabData.boxClass || ''}`}
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
         >
-          <div
-            data-aos="fade-right"
-            data-aos-duration="1200"
-            data-aos-delay=""
-            className="grid grid-cols-3 gap-4"
-          >
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/3062547/pexels-photo-3062547.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Image 1"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/16259474/pexels-photo-16259474/free-photo-of-cameraman-posing-with-camera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Image 2"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/7149650/pexels-photo-7149650.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Image 3"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-          </div>
+          <Gallery
+            images={isAllTab ? mergedImages : currentTabData?.images || []}
+          />
         </div>
       )}
-      {activeTab === 1 && (
-        <div
-          className="portfolio-box-02"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-          data-aos-delay=""
-        >
-          <div
-            data-aos="fade-right"
-            data-aos-duration="1200"
-            data-aos-delay=""
-            className="grid grid-cols-3 gap-4"
-          >
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/8089238/pexels-photo-8089238.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Image 4"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/4841631/pexels-photo-4841631.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Image 5"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/5052650/pexels-photo-5052650.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Image 6"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-          </div>
-        </div>
-      )}
-      {activeTab === 2 && (
-        <div
-          className="portfolio-box-01 aos-init"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-          data-aos-delay=""
-        >
-          <div
-            data-aos="fade-right"
-            data-aos-duration="1200"
-            data-aos-delay=""
-            className="grid grid-cols-3 gap-4"
-          >
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/3062547/pexels-photo-3062547.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Image 7"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/3062547/pexels-photo-3062547.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Image 8"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="gallery-link">
-              <Image
-                src="https://images.pexels.com/photos/3062547/pexels-photo-3062547.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Image 9"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Tab Content */}
     </div>
   );
 };

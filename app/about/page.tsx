@@ -12,7 +12,7 @@ type Props = {
 const ServiceCard = ({ ...service }) => (
   <Tilt
     options={{ max: 45, scale: 1, speed: 450 }}
-    className="xs:w-[250px] w-full"
+    className="md:w-[250px] w-full"
   >
     <div
       data-aos="fade-up"
@@ -57,7 +57,7 @@ const About = () => {
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!`}
       </p>
-      <div className="flex flex-wrap gap-10 mt-20">
+      <div className="grid grid-cols-2 md:flex md:flex-wrap gap-5 md:gap-10 mt-20">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

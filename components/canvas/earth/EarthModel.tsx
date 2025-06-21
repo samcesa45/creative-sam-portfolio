@@ -1,7 +1,7 @@
-import { useGLTF } from "@react-three/drei";
+import { useGLTF } from '@react-three/drei';
 
 const EarthModel = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+  const earth = useGLTF('./planet/scene.gltf');
 
   return (
     // eslint-disable-next-line react/no-unknown-property
@@ -9,6 +9,6 @@ const EarthModel = () => {
   );
 };
 
-useGLTF.preload("./planet/scene.gltf")
+useGLTF.preload('./planet/scene.gltf');
 
-export default EarthModel
+export default EarthModel;

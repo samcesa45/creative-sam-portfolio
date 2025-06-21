@@ -1,14 +1,14 @@
-"use client";
-import { useState, useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
-import { random } from "maath";
-import { Mesh } from "three";
+'use client';
+import { useState, useRef, Suspense } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Points, PointMaterial, Preload } from '@react-three/drei';
+import { random } from 'maath';
+import { Mesh } from 'three';
 
 const Stars = (props: any) => {
   const ref = useRef<Mesh>(null);
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5001), { radius: 1.2 })
+    random.inSphere(new Float32Array(5001), { radius: 1.2 }),
   );
 
   useFrame((state, delta) => {

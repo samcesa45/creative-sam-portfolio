@@ -1,10 +1,10 @@
-import { styles } from "@/styles";
-import { staggerContainer } from "@/utils/motion";
-import { motion } from "framer-motion";
+import { styles } from '@/styles';
+import { staggerContainer } from '@/utils/motion';
+import { motion } from 'framer-motion';
 
 export default function SectionWrapper(
   Component: React.ComponentType,
-  idName: string
+  idName: string,
 ) {
   return function HOC() {
     return (

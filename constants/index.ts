@@ -29,11 +29,12 @@ import {
 
 } from "@/assets";
 import hasob from "../assets/hasob.png";
-import   taisolarin from "../assets/taisolarin.png";
+import   ezimo from "../assets/ezimo.png";
 import   corenotes from "../assets/corenotes.png";
 import   iterum from "../assets/iterum.png";
 import   myeverydeal from "../assets/my-everydeal.png";
 import   zelfarms from "../assets/zelfarms-img.png";
+import   zelfarmsMobile from "../assets/zelfarms.png";
 import   DNest from "../assets/DNest-img.png";
 import   dlplus from "../assets/dlplus.png";
 import   Zeltech from "../assets/zeltech.jpg"
@@ -43,6 +44,12 @@ import tetfund from "../assets/tetfund.png"
 import sanmtos from "../assets/sanmtos.png"
 import itranxit from "../assets/iTranxit.png"
 import itranxit2 from "../assets/iTransxit2.png"
+import stokops from "../assets/stokops.png"
+import stokopsMobile from "../assets/stokops-mobile.png"
+import classPadi from "../assets/class-padi.png"
+import laura from "../assets/laura.png"
+import { TabItem } from "@/components/tabs";
+
 
 export const navLinks = [
   {
@@ -61,7 +68,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "React Developer",
+    title: "React/Next js Developer",
     icon: web,
   },
   {
@@ -69,7 +76,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Node js Developer",
+    title: "Wordpress Developer",
     icon: backend,
   },
   {
@@ -143,13 +150,15 @@ const experiences = [
     company_name: "Zeltech",
     icon: Zeltech,
     iconBg: "#E6DEDD",
-    date: "Oct 2024 - Jan 2024",
+    date: "Oct 2024 - June 2024",
     points: [
       "Built Zelfarms and DNest web application using React, Zustand and Tanstack query, reducing page load time by 30% and enhancing user retention.",
       "Developed and maintained 2+ client-facing web applications, enhancing user engagement and satisfaction by 20%.",
       "Enhanced cross-browser compatibility and SEO, leading to a 15% boost in organic search traffic.",
       "Implemented responsive designs for multiple platforms, resulting in a 40% increase in mobile traffic.",
       "Conducted code reviews and mentoring, improving code quality and reducing production bugs by 15%.",
+      "Built Ezimo blog and optimized it for better seo using Next js",
+      "Refactored and optimised StokOps Mobile for better performance thereby increasing mobile traffic by 20%, fixed all recurring bugs."
     ],
   },
   {
@@ -185,7 +194,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but Sam proved me wrong.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
@@ -193,7 +202,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met a web developer who truly cares about their clients' success like Sam does.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
@@ -201,7 +210,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Sam optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
@@ -210,6 +219,40 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Laura Windsor Etiquette Academy",
+    description:
+      "Etiquette Academy websites that helps children and adults acquire the skills to navigate modern polite society in a multi-cultural environment ",
+    tags: [
+      {
+        name: "elementor",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "wordpress",
+        color: "green-text-gradient",
+      },
+    ],
+    image: laura,
+    source_code_link: "https://laurawindsoretiquett.com/",
+  },
+  {
+    name: "classPadi Academy",
+    description:
+      "A landing page that helps users understands, enquire and access the main application",
+    tags: [
+      {
+        name: "laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "boostrap 5",
+        color: "green-text-gradient",
+      },
+    ],
+    image: classPadi,
+    source_code_link: "https://classpadi.com/",
+  },
   {
     name: "Scola LMS Portal",
     description:
@@ -234,6 +277,30 @@ const projects = [
     ],
     image: iterum,
     source_code_link: "https://platform.scola.ng/",
+  },
+  {
+    name:"StokOps",
+    description:"This system helps you manage your inventory, track your suppliers, and optimize your business operations with ease.",
+    tags:[
+      {
+        name:"Laravel",
+        color:"blue-text-gradient"
+      },
+      {
+        name: "mysql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap5/scss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "jquery",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: stokops,
+    source_code_link: "https://stokops.com/",
   },
   {
     name: "Zelfarms",
@@ -261,6 +328,27 @@ const projects = [
     source_code_link: "https://zelfarms.com",
   },
   {
+    name: "Zelfarms Mobile",
+    description:
+      "Zelfarms is an ecommerce platform that focus on delivering products that meet the highest standards of quality and taste.",
+      tags: [
+        {
+          name: "Flutter",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "riverpod",
+          color: "green-text-gradient",
+        },
+        {
+          name: "hive",
+          color: "orange-text-gradient",
+        },
+      ],
+    image: zelfarmsMobile,
+    source_code_link: "https://play.google.com/store/apps/details?id=com.zelfarms.app",
+  },
+  {
     name: "DNest Rentals",
     description:
       "DNest helps Facilitate property rentals, bookings, and hospitality management.",
@@ -284,6 +372,58 @@ const projects = [
     ],
     image: DNest,
     source_code_link: "https://dnest.ng",
+  },
+  {
+    name:"Ezimo Town",
+    description:"A simple blog that showcases the rich cultural heritage of ezimo, the people and its blessed natural resources",
+    tags:[
+      {
+        name:"Next js",
+        color:"blue-text-gradient"
+      },
+      {
+        name: "Tanstack query",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: ezimo,
+    source_code_link: "#",
+  },
+  {
+    name: "StokOps Mobile",
+    description:"This system helps you manage your inventory, track your suppliers, and optimize your business operations with ease.",
+    tags: [
+      {
+        name: "React Native",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tanstack query",
+        color: "green-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "React Native Paper",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Native wind",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: stokopsMobile,
+    source_code_link: "https://apps.apple.com/ng/app/stokops/id6737730220",
   },
   {
     name: "MyEverydeal",
@@ -344,7 +484,6 @@ const projects = [
     image: itranxit2,
     source_code_link: "https://itranxit.com/",
   },
-
   {
     name: "Core Notes",
     description:
@@ -425,27 +564,70 @@ const projects = [
     image: tetfund,
     source_code_link: "https://tetfund.gov.ng/",
   },
+  // {
+  //   name: "Sanmtos Farm",
+  //   description:
+  //     "A multi vendor ecommerce marketplace that helps small and large businesses grow and reach new consumers. It offers a platform where customers in any part of the world can find and shop for all they need.",
+  //   tags: [
+  //     {
+  //       name: "react",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "rtk query",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "laravel",
+  //       color: "green-text-gradient",
+  //     },
+  //   ],
+  //   image: sanmtos,
+  //   source_code_link: "https://github.com/",
+  // },
+];
+
+const tabData: TabItem[] = [
   {
-    name: "Sanmtos Farm",
-    description:
-      "A multi vendor ecommerce marketplace that helps small and large businesses grow and reach new consumers. It offers a platform where customers in any part of the world can find and shop for all they need.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rtk query",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "laravel",
-        color: "green-text-gradient",
-      },
+    id:0,
+    title:'All',
+    images:[
+      
     ],
-    image: sanmtos,
-    source_code_link: "https://github.com/",
+    boxClass:'portfolio-box-01 aos-init'
+  },
+  {
+    id: 1,
+    title: "Web app",
+    images: [
+      { src: stokops, alt: "Image 5" },
+      { src: ezimo, alt: "Image 6" },
+      { src: zelfarms, alt: "Image 6" },
+      { src: iterum, alt: "Image 4" },
+      { src: classPadi, alt: "Image 4" },
+    ],
+    boxClass: "portfolio-box-02",
+  },
+  {
+    id: 2,
+    title: "Mobile app",
+    images: [
+      { src: stokopsMobile, alt:"Stokops Image" },
+      { src: zelfarmsMobile, alt: "Zelfarms Image" },
+      { src: itranxit2, alt: "Itranxit image" },
+
+    ],
+    boxClass: "portfolio-box-01 aos-init",
+  },
+  {
+    id: 3,
+    title: "Wordpress",
+    images: [
+      { src: "/images/laura.png", alt: "laura Image" },
+      { src: "/images/dlplus.png", alt: "Dlplus Image" },
+    ],
+    boxClass: "portfolio-box-01 aos-init",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects,tabData };

@@ -302,33 +302,33 @@
 
 .portfolio-box-01 img {
   transition: all 0.55s;
-  width: 100%;
+  max-width: 100%;
 }
 
 .portfolio-box-01 .gallery-link {
-  cursor: zoom-in !important;
+  cursor: zoom-in;
   display: block;
   position: relative;
 }
 
 .portfolio-box-01:hover .gallery-link img {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
 }
 .portfolio-box-02 img {
   transition: all 0.55s;
-  width: 100%;
+  max-width: 100%;
 }
 
 .portfolio-box-02 .gallery-link {
-  cursor: zoom-in !important;
+  cursor: zoom-in ;
   display: block;
   position: relative;
 }
 
 .portfolio-box-02:hover .gallery-link img {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .portfolio-box-01 .gallery-link:after {

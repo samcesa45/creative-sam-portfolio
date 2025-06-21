@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
@@ -12,38 +12,39 @@ interface ThemeContextType {
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: "light",
+  theme: "dark",
   toggleTheme: () => {},
 });
 
-export const ThemeProvider = ({ children }: Props) => {
-  const [theme, setTheme] = useState<Theme>("light");
+export const ThemeProvider = ({children}: Props) => {
+  const [theme, setTheme]= useState<Theme>(() => {
+    if(typeof window !== 'undefined') {
+      const storedTheme = localStorage.getItem('color-theme') as Theme | null;
+      return storedTheme ? storedTheme : 'dark'
+    }
+
+    return 'dark'
+  })
+
+  useEffect(() => {
+    if(theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    localStorage.setItem('color-theme', theme)
+  },[theme])
 
   const toggleTheme = () => {
-    setTheme((previousTheme) => (previousTheme === "light" ? "dark" : "light"));
-    if (window != undefined) {
-      if (localStorage.getItem("color-theme")) {
-        if (localStorage.getItem("color-theme") === "light") {
-          document.documentElement.classList.add("dark");
-          localStorage.setItem("color-theme", "dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-          localStorage.setItem("color-theme", "light");
-        }
-      } else {
-        if (document.documentElement.classList.contains("dark")) {
-          document.documentElement.classList.remove("dark");
-          localStorage.setItem("color-theme", "light");
-        } else {
-          document.documentElement.classList.add("dark");
-          localStorage.setItem("color-theme", "dark");
-        }
-      }
-    }
-  };
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
+  }
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
       {children}
     </ThemeContext.Provider>
-  );
-};
+  )
+}
+
+
+

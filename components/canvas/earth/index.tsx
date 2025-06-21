@@ -1,9 +1,9 @@
-import React, {lazy, Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import Loader from "@/components/Loader";
+import React, { lazy, Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import Loader from '@/components/Loader';
 
-const Earth = lazy(() => import('./EarthModel'))
+const Earth = lazy(() => import('./EarthModel'));
 
 const EarthCanvas = () => {
   return (
