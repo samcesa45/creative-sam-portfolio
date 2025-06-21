@@ -12,7 +12,7 @@ export default function Gallery({
   aosDelay = '',
 }: GalleryProps) {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
       {images.map((image, index) => (
         <div
           // data-aos="fade-right"

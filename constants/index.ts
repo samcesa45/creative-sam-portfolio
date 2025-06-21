@@ -598,7 +598,7 @@ const tabData: TabItem[] = [
   },
   {
     id: 1,
-    title: "Web app",
+    title: "Web",
     images: [
       { src: stokops, alt: "Image 5" },
       { src: ezimo, alt: "Image 6" },
@@ -610,7 +610,7 @@ const tabData: TabItem[] = [
   },
   {
     id: 2,
-    title: "Mobile app",
+    title: "Mobile",
     images: [
       { src: stokopsMobile, alt:"Stokops Image" },
       { src: zelfarmsMobile, alt: "Zelfarms Image" },
