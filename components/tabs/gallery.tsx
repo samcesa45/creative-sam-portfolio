@@ -15,9 +15,9 @@ export default function Gallery({
     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
       {images.map((image, index) => (
         <div
-          // data-aos="fade-right"
-          // data-aos-duration={aosDuration}
-          // data-aos-delay={aosDelay}
+          data-aos="fade-right"
+          data-aos-duration={aosDuration}
+          data-aos-delay={aosDelay}
           key={index}
           className="bg-top gallery-link"
         >

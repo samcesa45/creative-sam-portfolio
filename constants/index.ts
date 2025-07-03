@@ -395,7 +395,7 @@ const projects = [
       },
     ],
     image: ezimo,
-    source_code_link: "#",
+    source_code_link: "https://www.ezimotown.com/",
   },
   {
     name: "StokOps Mobile",
