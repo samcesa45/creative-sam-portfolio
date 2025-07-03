@@ -237,6 +237,58 @@ const projects = [
     source_code_link: "https://laurawindsoretiquett.com/",
   },
   {
+    name:"Ezimo Town",
+    description:"A simple blog that showcases the rich cultural heritage of ezimo, the people and its blessed natural resources",
+    tags:[
+      {
+        name:"Next js",
+        color:"blue-text-gradient"
+      },
+      {
+        name: "Tanstack query",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: ezimo,
+    source_code_link: "https://www.ezimotown.com/",
+  },
+  {
+    name: "StokOps Mobile",
+    description:"This system helps you manage your inventory, track your suppliers, and optimize your business operations with ease.",
+    tags: [
+      {
+        name: "React Native",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tanstack query",
+        color: "green-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "React Native Paper",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Native wind",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: stokopsMobile,
+    source_code_link: "https://apps.apple.com/ng/app/stokops/id6737730220",
+  },
+  {
     name: "classPadi Academy",
     description:
       "A landing page that helps users understands, enquire and access the main application",
@@ -372,58 +424,6 @@ const projects = [
     ],
     image: DNest,
     source_code_link: "https://dnest.ng",
-  },
-  {
-    name:"Ezimo Town",
-    description:"A simple blog that showcases the rich cultural heritage of ezimo, the people and its blessed natural resources",
-    tags:[
-      {
-        name:"Next js",
-        color:"blue-text-gradient"
-      },
-      {
-        name: "Tanstack query",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "zustand",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: ezimo,
-    source_code_link: "https://www.ezimotown.com/",
-  },
-  {
-    name: "StokOps Mobile",
-    description:"This system helps you manage your inventory, track your suppliers, and optimize your business operations with ease.",
-    tags: [
-      {
-        name: "React Native",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Tanstack query",
-        color: "green-text-gradient",
-      },
-      {
-        name: "zustand",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "React Native Paper",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Native wind",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: stokopsMobile,
-    source_code_link: "https://apps.apple.com/ng/app/stokops/id6737730220",
   },
   {
     name: "MyEverydeal",
