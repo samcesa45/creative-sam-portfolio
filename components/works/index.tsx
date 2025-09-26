@@ -31,7 +31,7 @@ const Works = () => {
       <PaginatedList
         items={projects}
         itemsPerPage={6}
-        renderItem={(item, index) => <ProjectCard index={index} {...item} />}
+        renderItem={(item, index) => <ProjectCard key={`${item.name}-${index}`} index={index} {...item} />}
       />
     </>
   );
@@ -88,8 +88,8 @@ const ProjectCard = ({
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
         <div className="flex flex-wrap gap-2 mt-4">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+          {tags.map((tag,index) => (
+            <p key={`${tag.name}-${index}`} className={`text-[14px] ${tag.color}`}>
               # {tag.name}
             </p>
           ))}

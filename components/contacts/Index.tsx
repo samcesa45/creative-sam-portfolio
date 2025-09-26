@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState} from 'react';
 import SectionWrapper from '../section_wrapper/SectionWrapper';
 import { motion } from 'framer-motion';
 import { slideIn } from '@/utils/motion';
-import EarthCanvas from '../canvas/earth';
+// import EarthCanvas from '../canvas/earth';
 import emailjs from '@emailjs/browser';
 
 import withReactContent from 'sweetalert2-react-content';
@@ -183,12 +183,12 @@ const Contacts = () => {
         </form>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

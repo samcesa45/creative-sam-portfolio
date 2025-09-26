@@ -7,7 +7,7 @@ import Works from "@/components/works";
 import Feedbacks from "@/components/feedbacks";
 import Contacts from "@/components/contacts/Index";
 import MyTabs from "@/components/tabs";
-import StarsCanvas from "@/components/canvas/star";
+// import StarsCanvas from "@/components/canvas/star";
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
       </div>
       <div className="relative z-0">
         <Contacts />
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
       </div>
     </main>
   );

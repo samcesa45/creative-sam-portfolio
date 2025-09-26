@@ -20,6 +20,7 @@ const ExperienceCard = ({ ...experience }) => {
         background: '#1d1836',
         color: `${theme === 'dark' ? '#fff' : '#222222'}`,
       }}
+      dateClassName='dark:text-white text-[#222222]'
       contentArrowStyle={{
         borderRight: `${
           theme === 'dark' ? '7px solid #232631' : '7px solid #222222'

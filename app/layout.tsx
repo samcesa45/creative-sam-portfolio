@@ -13,10 +13,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal,
 }: {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -27,7 +25,6 @@ export default function RootLayout({
         data-aos-delay="0"
       >
         <Providers>{children}</Providers>
-        {modal}
       </body>
     </html>
   );

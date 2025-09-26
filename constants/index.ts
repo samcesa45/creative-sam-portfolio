@@ -16,13 +16,13 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  // meta,
+  // starbucks,
+  // tesla,
+  // shopify,
+  // carrent,
+  // jobit,
+  // tripguide,
   threejs,
   herobg,
   
@@ -41,13 +41,15 @@ import   Zeltech from "../assets/zeltech.jpg"
 import   MyeverydealLogo from "../assets/myeverydeal-website-logo.webp"
 import shops from "../assets/shops.jpg"
 import tetfund from "../assets/tetfund.png"
-import sanmtos from "../assets/sanmtos.png"
+// import sanmtos from "../assets/sanmtos.png"
 import itranxit from "../assets/iTranxit.png"
 import itranxit2 from "../assets/iTransxit2.png"
 import stokops from "../assets/stokops.png"
 import stokopsMobile from "../assets/stokops-mobile.png"
 import classPadi from "../assets/class-padi.png"
 import laura from "../assets/laura.png"
+import bpa from "../assets/bpa.png"
+import zeltechnology from "../assets/zeltechnology.png"
 import { TabItem } from "@/components/tabs";
 
 
@@ -147,10 +149,10 @@ const technologies = [
 const experiences = [
   {
     title: "Frontend Engineer",
-    company_name: "Zeltech",
+    company_name: "Zeltechnologies",
     icon: Zeltech,
     iconBg: "#E6DEDD",
-    date: "Oct 2024 - June 2024",
+    date: "Oct 2024 - september 2025",
     points: [
       "Built Zelfarms and DNest web application using React, Zustand and Tanstack query, reducing page load time by 30% and enhancing user retention.",
       "Developed and maintained 2+ client-facing web applications, enhancing user engagement and satisfaction by 20%.",
@@ -168,7 +170,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "Dec 2021 - Dec 2024",
     points: [
-      "Developed and maintained 3+ client-facing web applications, enhancing user engagement and satisfaction by 25%.",
+      "Developed dashboards, custom web templates for institutions using various libraries such as tailwindcss, bootstrap5 and sass",
       "Collaborated with designers and product managers to deliver intuitive and visually appealing interfaces.",
       "Optimized web performance and ensured accessibility compliance, leading to a 20% improvement in user experience metrics.",
       "Developed and maintained 2 websites templates so that clients can select the one that meets their requirements thereby increasing clients satisfactions",
@@ -235,6 +237,40 @@ const projects = [
     ],
     image: laura,
     source_code_link: "https://laurawindsoretiquett.com/",
+  },
+  {
+    name: "Bristish Protocol Academy",
+    description:
+      "A Website that provides practical etiquette and diplomacy training for individuals, professionals, and organizations. ",
+    tags: [
+      {
+        name: "elementor",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "wordpress",
+        color: "green-text-gradient",
+      },
+    ],
+    image: bpa,
+    source_code_link: "https://thebritishprotocolacademy.com/",
+  },
+  {
+    name: "Zeltechnologies",
+    description:
+      "A Websites that helps Transform and Elevate Your Business Through Innovative and Personalized Technology Solutions",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "green-text-gradient",
+      },
+    ],
+    image: zeltechnology,
+    source_code_link: "https://zeltechnologies.com/",
   },
   {
     name:"Ezimo Town",
